@@ -30,9 +30,13 @@ UMT APP PRO/
 
 ## 🚀 How to Run
 
-1. Clone this repository or download the ZIP
-2. Open `login.html` or `index.html` in any web browser
-3. Explore the student dashboard UI!
+1. Clone this repository or download the ZIP  
+2. Open `login.html` or `index.html` in any web browser  
+3. Use the login credentials below to access the dashboard
+
+**🔑 Demo Credentials**  
+- Username: `lol@gmail.com`  
+- Password: `11223344`
 
 ## 🧠 Note
 
