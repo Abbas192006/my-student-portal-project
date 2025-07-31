@@ -1,0 +1,437 @@
+/* Light/Dark Mode Variables */
+:root {
+    /* Light theme: UMT Official Colors - Blue and White */
+    --bg-color: #ffffff;
+    --text-color: #1e3a8a;
+    --card-bg: #f8fafc;
+    --border-color: rgba(59, 130, 246, 0.15);
+    --shadow-color: rgba(59, 130, 246, 0.1);
+    --gradient-start: #3b82f6;
+    --gradient-end: #1d4ed8;
+    --hover-bg: rgba(59, 130, 246, 0.05);
+    --scrollbar-track: #f1f5f9;
+    --nav-bg: #ffffff;
+    --nav-text: #1e3a8a;
+    --nav-border: rgba(59, 130, 246, 0.1);
+    --sidebar-bg: #ffffff;
+    --active-bg: rgba(59, 130, 246, 0.1);
+    --active-text: #1d4ed8;
+}
+
+.dark-mode {
+    /* Dark theme: UMT Blue-inspired Navy */
+    --bg-color: #1e293b;
+    --text-color: #f1f5f9;
+    --card-bg: #334155;
+    --border-color: rgba(148, 163, 184, 0.2);
+    --shadow-color: rgba(0, 0, 0, 0.25);
+    --gradient-start: #60a5fa;
+    --gradient-end: #3b82f6;
+    --hover-bg: rgba(96, 165, 250, 0.1);
+    --scrollbar-track: #1e293b;
+    --nav-bg: #334155;
+    --nav-text: #f1f5f9;
+    --nav-border: rgba(148, 163, 184, 0.2);
+    --sidebar-bg: #1e293b;
+    --active-bg: rgba(96, 165, 250, 0.2);
+    --active-text: #60a5fa;
+}
+
+/* --- Dark Mode Visibility Fixes --- */
+
+/* Fix body background color */
+.dark-mode.bg-gray-50, .dark-mode .bg-gray-50 {
+    background-color: var(--bg-color) !important;
+}
+
+.dark-mode .bg-white {
+    background-color: var(--card-bg) !important;
+}
+
+/* Fix text visibility */
+.dark-mode .text-gray-900,
+.dark-mode .text-gray-800,
+.dark-mode .text-gray-700,
+.dark-mode .text-gray-600,
+.dark-mode .text-gray-500 {
+    color: var(--text-color) !important;
+}
+
+.dark-mode .text-gray-600, .dark-mode .text-gray-500 {
+    opacity: 0.8;
+}
+
+/* Fix sidebar section headers */
+.dark-mode p[style*="opacity: 0.6"] {
+    opacity: 0.7 !important;
+    color: #bdc3c7 !important;
+}
+
+/* Fix colored text */
+.dark-mode .text-blue-600 { color: #5dade2 !important; }
+.dark-mode .text-green-600 { color: #58d68d !important; }
+.dark-mode .text-red-600 { color: #ec7063 !important; }
+
+/* Fix background colors for elements */
+.dark-mode .bg-gray-200 {
+    background-color: #34495e !important;
+}
+
+.dark-mode .bg-blue-50, .dark-mode .bg-purple-50, .dark-mode .bg-green-50, .dark-mode .bg-yellow-50, .dark-mode .bg-red-50 {
+    background-color: rgba(52, 73, 94, 0.5) !important;
+}
+
+.dark-mode .bg-blue-100, .dark-mode .bg-purple-100, .dark-mode .bg-green-100, .dark-mode .bg-yellow-100, .dark-mode .bg-red-100 {
+    background-color: rgba(127, 140, 141, 0.2) !important;
+}
+
+/* Fix colored text on colored backgrounds */
+.dark-mode .text-blue-800 { color: #a9cce3 !important; }
+.dark-mode .text-purple-800 { color: #d7bde2 !important; }
+.dark-mode .text-green-800 { color: #a3e4d7 !important; }
+.dark-mode .text-red-800 { color: #f5b7b1 !important; }
+.dark-mode .text-yellow-800 { color: #fAD7A0 !important; }
+
+/* Fix border colors */
+.dark-mode .border-gray-200, .dark-mode .border-gray-300 {
+    border-color: var(--border-color) !important;
+}
+
+.dark-mode .divide-gray-200 > * + * {
+    border-color: var(--border-color) !important;
+}
+
+/* Fix input fields */
+.dark-mode input, .dark-mode select, .dark-mode textarea {
+    background-color: #2c3e50 !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* Badge fixes */
+.dark-mode .badge-primary { background-color: rgba(93, 173, 226, 0.2); color: #85c1e9; }
+.dark-mode .badge-success { background-color: rgba(88, 214, 141, 0.2); color: #7dcea0; }
+.dark-mode .badge-warning { background-color: rgba(245, 176, 65, 0.2); color: #f8c471; }
+.dark-mode .badge-danger { background-color: rgba(236, 112, 99, 0.2); color: #f1948a; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    box-shadow: 0 4px 6px -1px var(--shadow-color), 0 2px 4px -1px var(--shadow-color);
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+    background-color: var(--card-bg);
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px var(--shadow-color), 0 10px 10px -5px var(--shadow-color);
+    border-color: rgba(var(--gradient-start), 0.2);
+}
+
+.card-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-hover:hover::before {
+    opacity: 1;
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+}
+
+.progress-ring-circle {
+    transition: stroke-dasharray 0.35s;
+    transform-origin: 50% 50%;
+}
+
+.sidebar-transition {
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .sidebar-hidden {
+        transform: translateX(-100%);
+    }
+}
+
+.nav-item {
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    color: var(--text-color);
+}
+
+.nav-item:hover {
+    transform: translateX(4px);
+    background-color: var(--hover-bg);
+}
+
+.nav-item.active {
+    background-color: var(--active-bg);
+    color: var(--active-text);
+    border-right: 3px solid var(--gradient-start);
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+    opacity: 0.8;
+}
+
+/* Loading animation */
+.loading {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 3px solid rgba(var(--gradient-start), 0.2);
+    border-radius: 50%;
+    border-top-color: var(--gradient-start);
+    animation: spin 1s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(var(--gradient-start), 0.1);
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 640px) {
+    .grid-responsive {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .grid-responsive {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .grid-responsive {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Enhanced UI Elements */
+.btn-primary {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px -1px var(--shadow-color), 0 2px 4px -1px var(--shadow-color);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px var(--shadow-color), 0 2px 4px -1px var(--shadow-color);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 600;
+    background-color: var(--card-bg);
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.badge-primary {
+    background-color: rgba(79, 70, 229, 0.1);
+    color: #4f46e5;
+}
+
+.badge-success {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+}
+
+.badge-warning {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+}
+
+.badge-danger {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+/* Dark mode badge fixes */
+.dark-mode .badge-primary {
+    background-color: rgba(79, 70, 229, 0.2);
+    color: #a78bfa;
+}
+
+.dark-mode .badge-success {
+    background-color: rgba(16, 185, 129, 0.2);
+    color: #68d391;
+}
+
+.dark-mode .badge-warning {
+    background-color: rgba(245, 158, 11, 0.2);
+    color: #fbb450;
+}
+
+.dark-mode .badge-danger {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+}
+
+/* Additional theme support for all text elements */
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6 {
+    color: var(--text-color) !important;
+}
+
+.dark-mode p, .dark-mode span, .dark-mode div {
+    color: var(--text-color);
+}
+
+.dark-mode .text-gray-900 {
+    color: var(--text-color) !important;
+}
+
+.dark-mode .text-gray-600 {
+    color: var(--text-color) !important;
+    opacity: 0.8;
+}
+
+.dark-mode .text-gray-500 {
+    color: var(--text-color) !important;
+    opacity: 0.7;
+}
+
+.dark-mode .text-gray-700 {
+    color: var(--text-color) !important;
+}
+
+.dark-mode .bg-gray-50 {
+    background-color: var(--card-bg) !important;
+}
+
+.dark-mode .bg-white {
+    background-color: var(--card-bg) !important;
+}
+
+.dark-mode .border-gray-200 {
+    border-color: var(--border-color) !important;
+}
+
+.dark-mode .border-gray-300 {
+    border-color: var(--border-color) !important;
+}
+
+.dark-mode .divide-gray-200 > * + * {
+    border-color: var(--border-color) !important;
+}
+
+/* Ensure input fields work properly in dark mode */
+.dark-mode input {
+    background-color: var(--card-bg) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+}
+
+.dark-mode select {
+    background-color: var(--card-bg) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+}
+
+.dark-mode textarea {
+    background-color: var(--card-bg) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+}
