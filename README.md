@@ -28,6 +28,10 @@ UMT APP PRO/
 ├── script.js         # JS for interactivity
 └── profile.jpg       # Sample profile image
 ```
+## 🌐 Live Demo
+
+You can view the deployed website here:  
+🔗 [Visit Website](https://umt-web-project.netlify.app/)
 
 ## 🚀 How to Run
 
