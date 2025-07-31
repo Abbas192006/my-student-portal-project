@@ -42,8 +42,8 @@ UMT APP PRO/
 
 ## 👥 Contributors
 
-- **Abbas** – Frontend structure, HTML/CSS layout, and coordination  
-- **Usman** – JavaScript functionality, debugging, and UI improvement  
+- **Abbas** 
+- **Usman**   
 - 🤖 **AI Tools Used** – ChatGPT, Copilot, and others for code assistance, design suggestions, and debugging support
 
 
