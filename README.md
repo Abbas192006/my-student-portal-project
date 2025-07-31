@@ -46,9 +46,10 @@ You can view the deployed website here:
 
 ## 👥 Contributors
 
-- **Abbas** 
-- **Usman**   
+- [**Abbas**](https://www.linkedin.com/in/muhammad-abbas-44a8a5338)  
+- [**Usman**](https://www.linkedin.com/in/usman4116/) 
 - 🤖 **AI Tools Used** – ChatGPT, Copilot, and others for code assistance, design suggestions, and debugging support
+
 
 
 
