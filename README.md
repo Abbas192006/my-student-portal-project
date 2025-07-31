@@ -3,6 +3,7 @@
 
 This is a simple front-end **Student Portal Web App** designed to replicate the feel of a university management system like UMT's online portal. It was built using **HTML, CSS, and JavaScript** to simulate a basic student interface with login functionality and responsive layout.
 
+---
 ## ✨ Features
 
 - 🔐 **Login Page** (UI only – no backend)
@@ -38,9 +39,35 @@ UMT APP PRO/
 - Username: `lol@gmail.com`  
 - Password: `11223344`
 
+
+## 👥 Contributors
+
+- **Abbas** – Frontend structure, HTML/CSS layout, and coordination  
+- **Usman** – JavaScript functionality, debugging, and UI improvement  
+- 🤖 **AI Tools Used** – ChatGPT, Copilot, and others for code assistance, design suggestions, and debugging support
+
+
+
+## 🔁 Project Background
+
+This website project builds upon a **Figma-based UI redesign** we created earlier as part of our **ICT Lab Final Project in 1st semester**, under the team name **JAWA** (Junaid, Abbas, Awais, Abdullah).
+
+That design project is available here:  
+🔗 [UMT App & Portal – Redesigned UI (Figma Project)](https://github.com/Abbas192006/umt-app-ui-redesign)
+
+It laid the foundation for our frontend development practice and inspired this implementation.
+
 ## 🧠 Note
 
-This is a **static project** (front-end only). It’s ideal for learning, practice, or showcasing UI skills — not connected to any backend or database.
+This is a **static, front-end-only project**, ideal for learning, practice, and showcasing UI skills.  
+It is not connected to any backend or database.
+
+The project was created during our summer break after the 2nd semester, with help from **AI tools like ChatGPT**, which supported us in debugging, layout improvement, and learning key web development concepts.
+
+This is a **student-made project**, not affiliated with or officially representing UMT.  
+It was developed purely for **academic growth and skill development**.
+
+
 
 
 ## 📄 License
